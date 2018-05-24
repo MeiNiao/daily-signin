@@ -48,7 +48,7 @@ docker run --rm \
   -e SITE={{site:smzdm}} \
   -e DUSERNAME={{username}} \
   -e DPASSWORD={{password}} \
-  playdingnow/daily-signin
+  playdingnow/daily-signin:v2.9.2
 ```
 
 or
@@ -59,7 +59,7 @@ docker run --rm \
   -e DUSERNAME={{username}} \
   -e DPASSWORD={{password}} \ # encoded base64 password
   -e ISBASE64=1 \
-  playdingnow/daily-signin
+  playdingnow/daily-signin:v2.9.2
 ```
 
 ### Docker Example Output
