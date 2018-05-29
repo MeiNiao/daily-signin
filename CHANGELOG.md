@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.3.3"></a>
+## [3.3.3](https://github.com/yidinghan/daily-signin/compare/v3.3.2...v3.3.3) (2018-05-29)
+
+
+### Features
+
+* **flyertea:** refresh home page for checkin result ([c33ce4a](https://github.com/yidinghan/daily-signin/commit/c33ce4a))
+
+
+
 <a name="3.3.2"></a>
 ## [3.3.2](https://github.com/yidinghan/daily-signin/compare/v3.3.1...v3.3.2) (2018-05-29)
 
