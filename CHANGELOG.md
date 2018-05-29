@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.2.0"></a>
+# [3.2.0](https://github.com/yidinghan/daily-signin/compare/v3.1.0...v3.2.0) (2018-05-29)
+
+
+### Features
+
+* **flyertea:** ignoreHTTPSErrors ([d8a68c0](https://github.com/yidinghan/daily-signin/commit/d8a68c0))
+* **flyertea:** just use http home ([6e470f8](https://github.com/yidinghan/daily-signin/commit/6e470f8))
+
+
+
 <a name="3.1.0"></a>
 # [3.1.0](https://github.com/yidinghan/daily-signin/compare/v3.0.0...v3.1.0) (2018-05-29)
 
