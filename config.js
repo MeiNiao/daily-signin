@@ -16,7 +16,7 @@ const config = {
   sites: {
     flyertea: {
       urls: {
-        home: 'https://www.flyertea.com',
+        home: 'http://www.flyertea.com',
       },
       elements: {
         gotoLogin:

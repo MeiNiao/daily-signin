@@ -40,8 +40,7 @@ const abortImages = async (page) => {
 };
 
 const run = async () => {
-  const options = Object.assign(config.puppeteer, { ignoreHTTPSErrors: true });
-  const browser = await puppeteer.launch(options);
+  const browser = await puppeteer.launch(config.puppeteer);
   const page = await browser.newPage();
   await page.setViewport(config.puppeteer.viewport);
   await abortImages(page);
