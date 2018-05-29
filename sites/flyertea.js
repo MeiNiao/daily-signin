@@ -32,7 +32,7 @@ const abortImages = async (page) => {
   await page.setRequestInterception(true);
   page.on('request', (interceptedRequest) => {
     const isImage = !!imageSuffix.find(suffix =>
-      interceptedRequest.url().endsWith(suffix) );
+      interceptedRequest.url().endsWith(suffix));
     if (isImage) {
       interceptedRequest.abort();
     } else {

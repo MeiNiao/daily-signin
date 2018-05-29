@@ -17,6 +17,7 @@ COPY package-lock.json .
 FROM base AS dependencies
 RUN npm set progress=false && npm config set depth 0
 RUN npm i --production
+RUN wget https://install.goreleaser.com/github.com/tj/node-prune.sh && sh node-prune.sh && ./bin/node-prune
 
 FROM base AS release
 WORKDIR /src-app
