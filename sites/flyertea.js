@@ -70,8 +70,10 @@ const run = async () => {
   console.log('flyertea,click,checkinBtn,after');
   await page.waitFor(5000);
 
-  await page.screenshot({ path: './dev-images/flyertea-click-checkin.png' });
+  await gotoHome(page);
+  await page.waitForSelector(ELES.checkinBtn);
   await logCheckinBtn(page, 'after');
+  await page.screenshot({ path: './dev-images/flyertea-click-checkin.png' });
   await browser.close();
 };
 
