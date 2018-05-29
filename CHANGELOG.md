@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/yidinghan/daily-signin/compare/v2.9.2...v3.0.0) (2018-05-29)
+
+
+### Features
+
+* **flyertea:** finish ([0e36031](https://github.com/yidinghan/daily-signin/commit/0e36031))
+* **flyertea:** go to home page ([903fdb7](https://github.com/yidinghan/daily-signin/commit/903fdb7))
+* **flyertea:** ini file ([476f6fd](https://github.com/yidinghan/daily-signin/commit/476f6fd))
+* **readme:** add v3 and flyertea ([aa481de](https://github.com/yidinghan/daily-signin/commit/aa481de))
+
+
+
 <a name="2.9.2"></a>
 ## [2.9.2](https://github.com/yidinghan/daily-signin/compare/v2.9.1...v2.9.2) (2017-11-28)
 
