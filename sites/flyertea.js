@@ -12,6 +12,7 @@ const loginProcess = async (page) => {
   await gotoHome(page);
   await page.screenshot({ path: './dev-images/flyertea-home.png' });
   await page.waitForSelector(ELES.gotoLogin);
+  console.log('flyertea,click,gotoLogin,before');
   await page.click(ELES.gotoLogin);
 
   await page.waitForSelector(ELES.usernameInput);
@@ -21,6 +22,7 @@ const loginProcess = async (page) => {
   await page.type(ELES.usernameInput, username);
   await page.type(ELES.passwordInput, password);
   await page.screenshot({ path: './dev-images/flyertea-login-type.png' });
+  console.log('flyertea,click,loginButton,before');
   await page.click(ELES.loginButton);
   await page.waitFor(10000);
 };
@@ -45,13 +47,15 @@ const run = async () => {
   await page.setViewport(config.puppeteer.viewport);
   await abortImages(page);
 
-  // login with retry
+  console.log('flyertea,login,before');
   await loginProcess(page);
+  console.log('flyertea,login,after');
 
   await gotoHome(page);
   await page.waitForSelector(ELES.checkinBtn);
   await page.screenshot({ path: './dev-images/flyertea-login-after.png' });
   await page.click(ELES.checkinBtn);
+  console.log('flyertea,click,checkinBtn,after');
   await page.waitFor(1000);
 
   await page.screenshot({ path: './dev-images/flyertea-click-checkin.png' });
