@@ -5,7 +5,7 @@ const config = require('../config');
 const { urls: URLS, elements: ELES } = config.sites.flyertea;
 
 const gotoHome = async (page) => {
-  await page.goto(URLS.home, { waitUntil: 'networkidle2' });
+  await page.goto(URLS.home, { waitUntil: 'domcontentloaded' });
 };
 
 const loginProcess = async (page) => {
@@ -14,7 +14,6 @@ const loginProcess = async (page) => {
   await page.waitForSelector(ELES.gotoLogin);
   await page.click(ELES.gotoLogin);
 
-  await page.waitForNavigation({ waitUntil: 'networkidle2' });
   await page.waitForSelector(ELES.usernameInput);
   await page.screenshot({ path: './dev-images/flyertea-login-before.png' });
 
@@ -23,6 +22,7 @@ const loginProcess = async (page) => {
   await page.type(ELES.passwordInput, password);
   await page.screenshot({ path: './dev-images/flyertea-login-type.png' });
   await page.click(ELES.loginButton);
+  await page.waitFor(10000);
 };
 
 const imageSuffix = ['.png', '.jpg'];
@@ -48,7 +48,6 @@ const run = async () => {
   // login with retry
   await loginProcess(page);
 
-  await page.waitForNavigation({ waitUntil: 'networkidle2' });
   await gotoHome(page);
   await page.waitForSelector(ELES.checkinBtn);
   await page.screenshot({ path: './dev-images/flyertea-login-after.png' });
