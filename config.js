@@ -23,10 +23,12 @@ const config = {
           '#toptb > ul.tool-right.option-list.clearfix > li:nth-child(2) > div > a:nth-child(2)',
         // usernameLoginButton:
         //   '#content > div > div.w > div > div.login-tab.login-tab-r > a',
-        // usernameInput: '#loginname',
-        // passwordInput: '#nloginpwd',
-        // loginButton: '#loginsubmit',
-        // checkinBtn: '#index-qian-btn',
+        usernameInput: '#login-1 > div:nth-child(1) > input[type="text"]',
+        passwordInput: '#login-1 > div:nth-child(2) > input[type="password"]',
+        loginButton:
+          '#app > div.form > form > div.btn-line-wrapper > input.btn.btn-primary.btn-line',
+        checkinBtn:
+          '#toptb > ul.tool-right.option-list.clearfix > li:nth-child(3) > div > a:nth-child(3)',
         // checkinSuccess: '#getRewardText',
       },
     },
