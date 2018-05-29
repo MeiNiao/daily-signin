@@ -14,6 +14,22 @@ const config = {
     password: process.env.DPASSWORD,
   },
   sites: {
+    flyertea: {
+      urls: {
+        home: 'https://www.flyertea.com',
+      },
+      elements: {
+        gotoLogin:
+          '#toptb > ul.tool-right.option-list.clearfix > li:nth-child(2) > div > a:nth-child(2)',
+        // usernameLoginButton:
+        //   '#content > div > div.w > div > div.login-tab.login-tab-r > a',
+        // usernameInput: '#loginname',
+        // passwordInput: '#nloginpwd',
+        // loginButton: '#loginsubmit',
+        // checkinBtn: '#index-qian-btn',
+        // checkinSuccess: '#getRewardText',
+      },
+    },
     jdjr: {
       urls: {
         home: 'http://vip.jr.jd.com',
