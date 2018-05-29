@@ -32,13 +32,22 @@ const abortImages = async (page) => {
   await page.setRequestInterception(true);
   page.on('request', (interceptedRequest) => {
     const isImage = !!imageSuffix.find(suffix =>
-      interceptedRequest.url().endsWith(suffix));
+      interceptedRequest.url().endsWith(suffix) );
     if (isImage) {
       interceptedRequest.abort();
     } else {
       interceptedRequest.continue();
     }
   });
+};
+
+const logCheckinBtn = async (page, msg) => {
+  const checkinBtnMessage = await page.$eval(
+    ELES.checkinBtn,
+    // @ts-ignore
+    div => div.innerText,
+  );
+  console.log(`flyertea.checkinBtn.${msg}`, { message: checkinBtnMessage });
 };
 
 const run = async () => {
@@ -53,18 +62,16 @@ const run = async () => {
 
   await gotoHome(page);
   await page.waitForSelector(ELES.checkinBtn);
+  await logCheckinBtn(page, 'before');
   await page.screenshot({ path: './dev-images/flyertea-login-after.png' });
+
+  console.log('flyertea,click,checkinBtn,before');
   await page.click(ELES.checkinBtn);
   console.log('flyertea,click,checkinBtn,after');
-  await page.waitFor(1000);
+  await page.waitFor(5000);
 
   await page.screenshot({ path: './dev-images/flyertea-click-checkin.png' });
-  const checkinBtnMessage = await page.$eval(
-    ELES.checkinBtn,
-    // @ts-ignore
-    div => div.innerText,
-  );
-  console.log('flyertea.checkinBtn.message', { message: checkinBtnMessage });
+  await logCheckinBtn(page, 'after');
   await browser.close();
 };
 
