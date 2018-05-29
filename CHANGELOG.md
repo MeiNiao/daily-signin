@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.3.2"></a>
+## [3.3.2](https://github.com/yidinghan/daily-signin/compare/v3.3.1...v3.3.2) (2018-05-29)
+
+
+### Features
+
+* **docker:** try to use node prune ([03af364](https://github.com/yidinghan/daily-signin/commit/03af364))
+
+
+
 <a name="3.3.1"></a>
 ## [3.3.1](https://github.com/yidinghan/daily-signin/compare/v3.3.0...v3.3.1) (2018-05-29)
 
