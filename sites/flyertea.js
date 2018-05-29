@@ -4,8 +4,12 @@ const config = require('../config');
 
 const { urls: URLS, elements: ELES } = config.sites.flyertea;
 
-const loginProcess = async (page) => {
+const gotoHome = async (page) => {
   await page.goto(URLS.home, { waitUntil: 'networkidle2' });
+};
+
+const loginProcess = async (page) => {
+  await gotoHome(page);
   await page.screenshot({ path: './dev-images/flyertea-home.png' });
   await page.waitForSelector(ELES.gotoLogin);
   await page.click(ELES.gotoLogin);
@@ -45,24 +49,19 @@ const run = async () => {
   await loginProcess(page);
 
   await page.waitForNavigation({ waitUntil: 'networkidle2' });
+  await gotoHome(page);
   await page.waitForSelector(ELES.checkinBtn);
   await page.screenshot({ path: './dev-images/flyertea-login-after.png' });
-
-  // await page.waitFor(10000);
   await page.click(ELES.checkinBtn);
-  await page.screenshot({
-    path: './dev-images/flyertea-click-signin.png',
-  });
-  // // wait more 10s for api calling
-  // await page.waitFor(10000);
+  await page.waitFor(1000);
 
+  await page.screenshot({ path: './dev-images/flyertea-click-checkin.png' });
   const checkinBtnMessage = await page.$eval(
     ELES.checkinBtn,
     // @ts-ignore
     div => div.innerText,
   );
   console.log('flyertea.checkinBtn.message', { message: checkinBtnMessage });
-
   await browser.close();
 };
 
