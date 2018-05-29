@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.3.0"></a>
+# [3.3.0](https://github.com/yidinghan/daily-signin/compare/v3.2.0...v3.3.0) (2018-05-29)
+
+
+### Features
+
+* **docker:** use node 10.2.1 ([7c7473c](https://github.com/yidinghan/daily-signin/commit/7c7473c))
+* **flyertea:** more logger ([0da4fc3](https://github.com/yidinghan/daily-signin/commit/0da4fc3))
+
+
+
 <a name="3.2.0"></a>
 # [3.2.0](https://github.com/yidinghan/daily-signin/compare/v3.1.0...v3.2.0) (2018-05-29)
 
