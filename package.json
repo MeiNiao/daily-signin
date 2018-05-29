@@ -1,6 +1,6 @@
 {
   "name": "daily-signin",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "daily signin script",
   "main": "index.js",
   "scripts": {

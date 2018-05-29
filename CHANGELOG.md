@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.1.0"></a>
+# [3.1.0](https://github.com/yidinghan/daily-signin/compare/v3.0.0...v3.1.0) (2018-05-29)
+
+
+### Features
+
+* **readme:** remote waitForNavigation ([1186598](https://github.com/yidinghan/daily-signin/commit/1186598))
+
+
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/yidinghan/daily-signin/compare/v2.9.2...v3.0.0) (2018-05-29)
 
