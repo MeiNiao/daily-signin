@@ -15,7 +15,7 @@ const loginProcess = async (page) => {
   console.log('flyertea,click,gotoLogin,before');
   await page.click(ELES.gotoLogin);
 
-  await page.waitForSelector(ELES.usernameInput);
+  await page.waitForSelector(ELES.loginButton);
   await page.screenshot({ path: './dev-images/flyertea-login-before.png' });
 
   const { username, password } = config.profile;
