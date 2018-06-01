@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.4.0"></a>
+# [3.4.0](https://github.com/yidinghan/daily-signin/compare/v3.3.3...v3.4.0) (2018-06-01)
+
+
+### Bug Fixes
+
+* **flyertea:** better checkin btn ([b80686b](https://github.com/yidinghan/daily-signin/commit/b80686b))
+
+
+### Features
+
+* **flyertea:** screenshot on every gotohome ([61cbe22](https://github.com/yidinghan/daily-signin/commit/61cbe22))
+* **flyertea:** try networkidle0 as waitUntil ([54c10dd](https://github.com/yidinghan/daily-signin/commit/54c10dd))
+* **flyertea:** wait for loginButton not username ([b824023](https://github.com/yidinghan/daily-signin/commit/b824023))
+
+
+
 <a name="3.3.3"></a>
 ## [3.3.3](https://github.com/yidinghan/daily-signin/compare/v3.3.2...v3.3.3) (2018-05-29)
 
