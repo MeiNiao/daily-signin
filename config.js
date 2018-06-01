@@ -27,8 +27,7 @@ const config = {
         passwordInput: '#login-1 > div:nth-child(2) > input[type="password"]',
         loginButton:
           '#app > div.form > form > div.btn-line-wrapper > input.btn.btn-primary.btn-line',
-        checkinBtn:
-          '#toptb > ul.tool-right.option-list.clearfix > li:nth-child(3) > div > a:nth-child(3)',
+        checkinBtn: 'a[data-title*="签"]',
         // checkinSuccess: '#getRewardText',
       },
     },
