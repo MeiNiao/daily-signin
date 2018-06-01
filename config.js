@@ -112,6 +112,7 @@ const config = {
     headless: process.env.NODE_ENV !== 'dev',
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
     timeout: 10000, // 10s
+    slowMo: 50,
     // ignoreHTTPSErrors: true,
     // executablePath: 'google-chrome-unstable',
     viewport: {

@@ -5,7 +5,7 @@ const config = require('../config');
 const { urls: URLS, elements: ELES } = config.sites.flyertea;
 
 const gotoHome = async (page) => {
-  await page.goto(URLS.home, { waitUntil: 'domcontentloaded' });
+  await page.goto(URLS.home, { waitUntil: 'networkidle0' });
 };
 
 const loginProcess = async (page) => {
