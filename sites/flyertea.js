@@ -4,13 +4,13 @@ const config = require('../config');
 
 const { urls: URLS, elements: ELES } = config.sites.flyertea;
 
-const gotoHome = async (page) => {
+const gotoHome = async (page, msg) => {
   await page.goto(URLS.home, { waitUntil: 'networkidle0' });
+  await page.screenshot({ path: `./dev-images/flyertea-home-${msg}.png` });
 };
 
 const loginProcess = async (page) => {
-  await gotoHome(page);
-  await page.screenshot({ path: './dev-images/flyertea-home.png' });
+  await gotoHome(page, 'gotologin');
   await page.waitForSelector(ELES.gotoLogin);
   console.log('flyertea,click,gotoLogin,before');
   await page.click(ELES.gotoLogin);
@@ -60,7 +60,7 @@ const run = async () => {
   await loginProcess(page);
   console.log('flyertea,login,after');
 
-  await gotoHome(page);
+  await gotoHome(page, 'loginafter');
   await page.waitForSelector(ELES.checkinBtn);
   await logCheckinBtn(page, 'before');
   await page.screenshot({ path: './dev-images/flyertea-login-after.png' });
@@ -70,7 +70,7 @@ const run = async () => {
   console.log('flyertea,click,checkinBtn,after');
   await page.waitFor(5000);
 
-  await gotoHome(page);
+  await gotoHome(page, 'checkinafter');
   await page.waitForSelector(ELES.checkinBtn);
   await logCheckinBtn(page, 'after');
   await page.screenshot({ path: './dev-images/flyertea-click-checkin.png' });
