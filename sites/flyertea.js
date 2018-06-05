@@ -5,7 +5,8 @@ const config = require('../config');
 const { urls: URLS, elements: ELES } = config.sites.flyertea;
 
 const gotoHome = async (page, msg) => {
-  await page.goto(URLS.home, { waitUntil: 'networkidle0' });
+  await page.goto(URLS.home, { waitUntil: 'domcontentloaded' });
+  await page.waitFor(5000);
   await page.screenshot({ path: `./dev-images/flyertea-home-${msg}.png` });
 };
 
@@ -27,12 +28,11 @@ const loginProcess = async (page) => {
   await page.waitFor(10000);
 };
 
-const imageSuffix = ['.png', '.jpg'];
+const imageSuffixRe = /\.(jpg|png)$/;
 const abortImages = async (page) => {
   await page.setRequestInterception(true);
   page.on('request', (interceptedRequest) => {
-    const isImage = !!imageSuffix.find(suffix =>
-      interceptedRequest.url().endsWith(suffix));
+    const isImage = imageSuffixRe.test(interceptedRequest.url());
     if (isImage) {
       interceptedRequest.abort();
     } else {
