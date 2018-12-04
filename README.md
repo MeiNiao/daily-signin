@@ -1,3 +1,11 @@
+# Delayed maintenance indefinitely
+
+无限期延迟维护
+
+![](https://yiding-pub-1253641397.picgz.myqcloud.com/doge-lueluelue.jpeg)
+
+这个项目的诞生是兴趣使然，现在已经没那么多精力维护，如果你有想法非常欢迎 fork 一个来改
+
 # daily-signin
 
 [![Docker Automated buil](https://img.shields.io/docker/automated/playdingnow/daily-signin.svg?style=flat-square)](https://hub.docker.com/r/playdingnow/daily-signin/)
